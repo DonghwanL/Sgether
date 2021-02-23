@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SGETHER | (스터디 리더 네임)님의 STUDY POST</title>
+    <link rel="stylesheet" href="./../main/main.css">
+    <link rel="stylesheet" href="study-post.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body>
+    <!-- User Alram & Interface Group -->
+    <div class="join-study-list">
+        Join Study List *
+    </div>
+
+    <div class="user-alram">
+        Alram :)
+    </div>
+
+    <div class="user-interface">
+        <div class="user-image">
+            <img src="" alt="">
+        </div>
+
+        <div class="user-name">
+            <p><strong>OOO님 환영합니다 :)</strong></p>
+            <div class="user-name-bar"></div>
+        </div>
+
+        <div class="user-interface-menu">
+            <ul>
+                <li><a href="#">회원정보 수정</a></li>
+                <li><a href="#">스크랩 목록</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <div class="header-logo-title">
+                <a href="#"><h1>SGETHER</h1></a>
+            </div>
+
+            <div class="header-menu">
+                <ul>
+                    <li><a href="#">스터디 찾기</a></li>
+                    <li><a href="#" class="join-study-btn">가입 중 스터디</a></li>
+                    <li><a href="#" class="login-btn">로그인</a></li>
+                    <!-- <li><a href="#">회원가입</a></li> -->
+                </ul>
+            </div>
+
+            <div class="header-search">
+                <input type="text" placeholder="스터디 검색"> 
+                <a href="#"><i class="xi-search"></i></a>
+                <i class="xi-bell-o main-user-alram"></i>
+                <i class="xi-profile main-user-btn"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Study Post -->
+    <section>
+        <aside>
+            <div class="study-menu">
+                <div class="study-member-toggle">
+                    <button class="member-toggle-btn">스터디 멤버&nbsp;&nbsp;&nbsp;▾</button>
+                </div>
+
+                <div class="study-member">
+                    <div class="study-member-list">
+                        <img src="./../images/user-default.png">
+                        <span class="leader">스터디 리더</span>
+                    </div>
+
+                    <div class="study-member-list">
+                        <img src="./../images/user-default.png">
+                        <span>스터디멤버 2</span>
+                    </div>
+
+                    <div class="study-member-list">
+                        <img src="./../images/user-default.png">
+                        <span>스터디멤버 3</span>
+                    </div>
+
+                </div>
+
+                <div class="study-member-toggle">
+                    <button class="member-toggle-btn">공유 파일 &nbsp;&nbsp;&nbsp;&nbsp;▾</button>
+                </div>
+
+                <div class="study-member-toggle">
+                    <button class="member-toggle-btn">스터디 관리&nbsp;&nbsp;&nbsp;▾</button>
+                </div>
+
+
+            </div>
+        </aside>
+        
+        <div class="post-wrapper">
+            <div class="study-post">
+                <br><br>
+                <div class="post-write">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="post-user-img">
+                            <img src="./../images/user-default.png">
+                        </div>
+    
+                            <i class="xi-file-add-o file-upload-btn"></i>
+                            <input type="file">
+                            <br>
+    
+                            <span class="fileupload-intro">첨부 파일을 선택 하세요</span>
+                            
+                            <textarea name="cwWrite" class="cwWrite"></textarea><br>
+                            <button type="submit" class="write-submit-btn">
+                                등록
+                            </button>
+                    </form>
+                </div>
+
+                <div class="post-list">
+                    <!-- 스터디그룹 생성 유저가 글을 남길 경우 아래 div로 출력 (색상 변환)-->
+                    <div class="post-list-item leader-write">
+                        <img src="./../images/user-default.png">
+                        <span class="writer">유저 닉네임 바인딩</span>
+                        <span class="write-date">작성일자 바인딩</span>
+                        <a href="#"><i class="xi-eraser review-modify-btn"></i></a>
+                        <a href="#"><i class="xi-close-min review-delete-btn"></i></a>
+                        <br>
+                        <textarea class="comment-content" readonly>dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</textarea><br>
+
+                        <span class="post-filedown">
+                            <i class="xi-folder-download post-filedown-btn"></i>첨부파일 : 
+                        </span>
+                    </div>
+
+                    <div class="post-list-item">
+                        <img src="./../images/user-default.png">
+                        <span class="writer">유저 닉네임 바인딩</span>
+                        <span class="write-date">작성일자 바인딩</span>
+                        <a href="#"><i class="xi-eraser review-modify-btn"></i></a>
+                        <a href="#"><i class="xi-close-min review-delete-btn"></i></a>
+                        <br>
+                        <textarea class="comment-content" readonly>dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</textarea><br>
+
+                        <span class="post-filedown">
+                            <i class="xi-folder-download post-filedown-btn"></i>첨부파일 : 
+                        </span>
+                    </div>
+
+                    <div class="padding-div"></div>
+        </div>
+    </section>
+
+      <!-- footer -->
+      <footer>
+        <div class="footer">
+            <div class="footer-top">
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">서비스이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-bottom">
+                <a href="tel:020200202">TEL : 02-020-0202 &nbsp;|&nbsp;</a>
+                <a href="mailto:sgether@sgetherinfo.com">EMAIL : sgether@sgetherinfo.com</a>
+            </div>
+
+            <div class="footer-copyright">
+                <p>©SGETHER. ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </footer>
+
+       <!-- Login Layer Popup -->
+       <div class="login-black-background">
+        <div class="login-white-background">
+            <p class="login-close">×</p>
+            <h3>LOGIN</h3>
+            <input type="text" placeholder="ID"><br>
+            <input type="password" placeholder="PASSWORD"><br>
+            <span><a href="#">ID 찾기</a></span>
+            <span>&nbsp;|&nbsp;</span>
+            <span><a href="#">비밀번호 찾기</a></span><br>
+            <button><a href="#">로그인</a></button>
+            <a href="#"><button class="google-login-btn"></button></a><br><br>
+            <span>🥳 아직 회원이 아니신가요? <a href="#" class="span-underline">가입하기</a></span>
+        <div>
+    </div>
+
+    <script src="./../main/main.js"></script>
+    <script src="study-post.js"></script>
+</body>
+</html>

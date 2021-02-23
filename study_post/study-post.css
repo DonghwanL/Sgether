@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 1500px;
+}
+
+.post-wrapper {
+  width: 100%;
+  height: 1500px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.study-post {
+  width: 700px;
+  height: 100%;
+  top: 150px;
+  left: 230px;
+  position: absolute;
+}
+
+.post-write {
+  width: 600px;
+  height: 270px;
+  padding: 20px;
+  margin: auto;
+  font-size: 13px;
+  background-color: #eee;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.post-user-img {
+  text-align: left;
+  margin-left: 55px;
+}
+
+.post-user-img img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.post-write .file-upload-btn {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.post-write input[type='file'] {
+  width: 120px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: 250px;
+  top: 85px;
+  opacity: 0;
+}
+
+.post-write .fileupload-intro {
+  font-weight: 500;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.post-write textarea:focus {
+  outline: none;
+}
+
+.post-write textarea {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 450px;
+  height: 80px;
+  resize: none;
+  padding: 13px;
+  font-size: 13px;
+}
+
+.post-write button {
+  width: 60px;
+  height: 25px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.post-write button:hover {
+  font-weight: 500;
+}
+
+.post-write button:focus {
+  outline: none;
+}
+
+.post-list {
+  width: 600px;
+  height: 100%;
+  margin: auto;
+  padding-top: 50px;
+  font-size: 13px;
+  padding-bottom: 50px;
+}
+
+.post-list img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.post-list .post-list-item {
+  width: 600px;
+  height: 280px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.post-list .leader-write {
+  background-color: #f1f2f6;
+  font-weight: 500;
+}
+
+.post-list .post-list-item textarea {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 500px;
+  height: 130px;
+  resize: none;
+  padding: 13px;
+  font-size: 13px;
+}
+
+.post-list .post-list-item textarea:focus {
+  outline: none;
+}
+
+.post-filedown {
+  display: inline-block;
+  margin-top: 10px;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.post-filedown i::before {
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.post-list-item i {
+  color: #f39c12;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 3px;
+}
+
+.writer {
+  display: inline-block;
+  margin-right: 10px;
+  width: 110px;
+}
+
+.write-date {
+  color: silver;
+  margin-left: 10px;
+}
+
+.review-modify-btn:before,
+.review-delete-btn:before {
+  color: gray;
+  font-weight: 500;
+  position: relative;
+  left: 240px;
+  margin-right: 3px;
+}
+
+.padding-div {
+  padding-bottom: 250px;
+}
+
+/* Study Menu (aside) */
+
+.study-menu {
+  width: 230px;
+  height: 400px;
+  position: fixed;
+  top: 170px;
+  right: 250px;
+  /* background-color: gray; */
+  z-index: 3;
+  transition: all 0.5s;
+}
+
+.study-member-toggle {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+}
+
+.study-member-toggle button {
+  border: none;
+  width: 200px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.study-member-toggle button:hover {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.study-member-toggle button:focus {
+  outline: none;
+}
+
+.study-member {
+  margin-top: 0;
+  margin-left: 15px;
+  padding: 5px;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border-radius: 4px;
+  display: none;
+  border: 1px solid #eee;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #eee;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+
+.study-member::-webkit-scrollbar {
+  display: none;
+}
+
+.study-member-list {
+  padding: 10px;
+  overflow: auto;
+}
+
+.study-member-list img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.study-member-list span {
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.study-member-list .leader {
+  font-weight: 600;
+}
