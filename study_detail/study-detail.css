@@ -102,7 +102,6 @@ body {
   height: 20px;
   padding: 4px;
   vertical-align: middle;
-  margin-bottom: 10px;
 }
 
 .study-info-summary {
@@ -124,6 +123,7 @@ body {
   border-radius: 4px;
   color: white;
   background-color: #e17055;
+  margin-bottom: 10px;
 }
 
 .study-join-button button:nth-child(3) {
@@ -177,6 +177,7 @@ body {
   height: 700px;
   top: 400px;
   position: absolute;
+  margin-top: 30px;
 }
 
 .study-detail-review {
@@ -187,6 +188,7 @@ body {
   display: none;
   overflow: auto;
   -ms-overflow-style: none;
+  margin-top: 20px;
 }
 
 .study-detail-review::-webkit-scrollbar {
@@ -229,8 +231,15 @@ body {
   margin-right: 8px;
 }
 
+.writer {
+  display: inline-block;
+  margin-right: 10px;
+  width: 110px;
+}
+
 .write-date {
   color: silver;
+  margin-left: 10px;
 }
 
 .review-write textarea {
@@ -353,6 +362,91 @@ body {
   margin-right: 3px;
 }
 
-.writer {
-  margin-right: 10px;
+.review-modify-btn:before,
+.review-delete-btn:before {
+  color: #ccc;
+  font-weight: 500;
+  position: relative;
+  left: 100px;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 1920px) {
+  .user-interface {
+    left: 1430px;
+  }
+
+  .main-image-content {
+    width: 45%;
+    margin: 8% auto 100px auto;
+  }
+
+  .user-alram {
+    top: 72px;
+    left: 1400px;
+  }
+
+  .join-study-list {
+    top: 72px;
+    left: 930px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* header */
+
+  .header {
+    height: 80px;
+  }
+
+  .header-logo-title h1 {
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 8px;
+  }
+
+  .header-menu {
+    padding: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .header-search input {
+    display: none;
+  }
+
+  .header-search i {
+    font-size: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  /* IMAGE SECTION */
+
+  .main-image-content {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    background-image: url(images/main_study.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+  }
+
+  .main-image-content h2 {
+    padding: 15px;
+    position: relative;
+    top: 80%;
+    font-size: 20px;
+  }
+
+  .main-image-content p {
+    padding: 15px;
+    position: relative;
+    top: 65%;
+    font-weight: 500;
+    font-size: 12px;
+  }
 }
