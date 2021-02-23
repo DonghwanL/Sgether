@@ -10,6 +10,9 @@ var userInterface = document.querySelector('.user-interface');
 var userAlramBtn = document.querySelector('.main-user-alram'); 
 var userAlram = document.querySelector('.user-alram'); 
 
+var joinStudyBtn = document.querySelector('.join-study-btn');
+var joinStudyList = document.querySelector('.join-study-list');  
+
 var slideBeforeBtn = document.querySelector('.slide-before-btn'); 
 var slideNextBtn = document.querySelector('.slide-next-btn'); 
 var hitItem1 = document.querySelectorAll('.study-hit-item');
@@ -48,9 +51,18 @@ userInterface.addEventListener('mouseleave', function() {
     userAlram.style.display = 'block';
 })
 
-userAlram.addEventListener('mouseleave', function(e) {
+userAlram.addEventListener('mouseleave', function() {
     userAlram.style.display = 'none';
  })
+
+ joinStudyBtn.addEventListener('mouseenter', function() {
+    joinStudyList.style.display = 'block';
+})
+
+joinStudyList.addEventListener('mouseleave', function() {
+    joinStudyList.style.display = 'none';
+ })
+
 
  /* Main Slider */
 

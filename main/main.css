@@ -49,7 +49,7 @@ a {
 .header-menu {
   padding: 10px;
   font-size: 13px;
-  margin-right: 20px;
+  margin-right: 130px;
 }
 
 .header-menu ul {
@@ -105,9 +105,9 @@ a {
 
 .login-white-background {
   background: white;
-  width: 30%;
-  height: 380px;
-  margin: 200px auto;
+  width: 400px;
+  height: 400px;
+  margin: 230px auto;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -187,8 +187,8 @@ a {
   width: 200px;
   height: 270px;
   position: fixed;
-  top: 10%;
-  left: 74%;
+  top: 72px;
+  left: 1080px;
   padding: 20px;
   border-radius: 4px;
   background-color: white;
@@ -196,7 +196,7 @@ a {
   display: none;
   transition: all 0.5s;
   font-size: 13px;
-  box-shadow: 1px 1px 1px #999;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #999;
 }
 
 .user-image {
@@ -234,41 +234,57 @@ a {
   height: 100px;
   padding: 10px;
   position: fixed;
-  top: 10%;
-  left: 72%;
+  top: 72px;
+  left: 1050px;
   display: none;
   z-index: 3;
   transition: all 0.5s;
   border-radius: 4px;
-  box-shadow: 1px 1px 1px #999;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #999;
+  font-size: 12px;
+}
+
+.join-study-list {
+  background-color: white;
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+  position: fixed;
+  top: 72px;
+  left: 570px;
+  display: none;
+  z-index: 3;
+  transition: all 0.5s;
+  border-radius: 4px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #999;
   font-size: 12px;
 }
 
 /* IMAGE SECTION */
 
 .main-image-content {
-  width: 60%;
+  width: 56%;
   height: 300px;
   background-color: #333;
-  background-image: url(images/main_study.png);
+  background-image: url(./../images/main_study.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 10% auto 50px auto;
+  margin: 10% auto 100px auto;
 }
 
 .main-image-content h2 {
   padding: 15px;
   position: relative;
-  top: 50%;
+  top: 165px;
 }
 
 .main-image-content p {
   padding: 17px;
   position: relative;
-  top: 35%;
+  top: 120px;
   font-weight: 500;
 }
 
@@ -402,6 +418,33 @@ a {
 }
 
 /* MEDIA QUERY */
+
+@media only screen and (min-width: 1920px) {
+  .user-interface {
+    left: 1430px;
+  }
+
+  .main-image-content {
+    width: 45%;
+    margin: 8% auto 100px auto;
+  }
+
+  .user-alram {
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    position: fixed;
+    top: 72px;
+    left: 1400px;
+    display: none;
+    z-index: 3;
+    transition: all 0.5s;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #999;
+    font-size: 12px;
+  }
+}
 
 @media only screen and (max-width: 480px) {
   /* header */
