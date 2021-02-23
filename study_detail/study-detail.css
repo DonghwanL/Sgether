@@ -152,17 +152,24 @@ body {
 .study-detail-menu .tab-list {
   font-size: 14px;
   height: 50px;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
 }
 
 .study-detail-menu .tab-list ul {
   display: flex;
+  margin: 20px 20% 0 35%;
 }
 
 .study-detail-menu .tab-list li {
-  margin-right: 50px;
   padding: 10px;
   cursor: pointer;
   height: 35px;
+}
+
+.study-detail-menu .tab-list li:nth-child(1) {
+  margin-right: 40px;
 }
 
 .study-detail-intro {
