@@ -23,7 +23,7 @@ body {
 
 .study-pr-image img {
   width: 300px;
-  height: 293px;
+  height: 313px;
   border-radius: 3px;
   margin-right: 30px;
 }
@@ -102,11 +102,12 @@ body {
   height: 20px;
   padding: 4px;
   vertical-align: middle;
+  margin-bottom: 10px;
 }
 
 .study-info-summary {
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-size: 13px;
 }
 
@@ -125,7 +126,15 @@ body {
   background-color: #e17055;
 }
 
-.study-join-button button:hover {
+.study-join-button button:nth-child(3) {
+  background-color: silver;
+}
+
+.study-join-button a {
+  color: white;
+}
+
+.study-join-button a:hover {
   font-weight: 500;
 }
 
