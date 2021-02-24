@@ -11,7 +11,9 @@
 <body>
     <!-- User Alram & Interface Group -->
     <div class="join-study-list">
-        Join Study List *
+        <span><a href="#">Join Study List</a></span>
+        <span><a href="#">Join Study List</a></span>
+        <span><a href="#">Join Study List</a></span>
     </div>
 
     <div class="user-alram">
@@ -67,13 +69,13 @@
     <section>
         <aside>
             <div class="study-menu">
-                <div class="study-member-toggle">
-                    <button class="member-toggle-btn">스터디 멤버&nbsp;&nbsp;&nbsp;▾</button>
+                <div class="menu-toggle">
+                    <button class="member-menu-btn menu-btn">스터디 멤버&nbsp;&nbsp;&nbsp;▾</button>
                 </div>
 
-                <div class="study-member">
+                <div class="menu-content member-content">
                     <div class="study-member-list">
-                        <img src="./../images/user-default.png">
+                        <img src="./../images/user-default.png" class="user-profile-img">
                         <span class="leader">스터디 리더</span>
                     </div>
 
@@ -89,14 +91,45 @@
 
                 </div>
 
-                <div class="study-member-toggle">
-                    <button class="member-toggle-btn">공유 파일 &nbsp;&nbsp;&nbsp;&nbsp;▾</button>
+                <!-- 스터디 관리 메뉴는 스터디 리더로 로그인 했을 경우에만 표시-->
+                <div class="menu-toggle">
+                    <button class="menu-btn manage-menu-btn">스터디 관리&nbsp;&nbsp;&nbsp;▾</button>
                 </div>
 
-                <div class="study-member-toggle">
-                    <button class="member-toggle-btn">스터디 관리&nbsp;&nbsp;&nbsp;▾</button>
+                <div class="menu-content manage-content">
+                    <div class="study-manage">
+                        <p>대기 중 멤버</p>
+
+                        <div class="wating-member-list">
+                            <img src="./../images/user-default.png" class="user-profile-img">
+    
+                            <span>유저 닉네임</span>&nbsp;&nbsp;&nbsp;
+                
+                            <button class="member-approve-btn"><a href="#">승인</a></button>
+                        </div>
+
+                        <div class="center-line"></div>
+                        
+                        <p>스터디 관리</p>
+
+                        <div class="study-manage-menu">
+                            <button class="study-delete-btn">스터디 폐쇄</button>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="menu-toggle">
+                    <button class="menu-btn file-menu-btn">공유 파일 &nbsp;&nbsp;&nbsp;&nbsp;▾</button>
+                </div>
+
+                <div class="menu-content file-content">
+                    <div class="study-file-list">
+                        <span>
+                            <i class="xi-file-add sharefile-list"></i>
+                            <a href="#">공유파일 1</a>
+                        </span>
+                    </div>
+                </div>
 
             </div>
         </aside>
@@ -106,8 +139,9 @@
                 <br><br>
                 <div class="post-write">
                     <form action="" method="POST" enctype="multipart/form-data">
+
                         <div class="post-user-img">
-                            <img src="./../images/user-default.png">
+                            <img src="./../images/user-default.png" class="user-profile-img">
                         </div>
     
                             <i class="xi-file-add-o file-upload-btn"></i>
@@ -126,13 +160,26 @@
                 <div class="post-list">
                     <!-- 스터디그룹 생성 유저가 글을 남길 경우 아래 div로 출력 (색상 변환)-->
                     <div class="post-list-item leader-write">
-                        <img src="./../images/user-default.png">
+                        <img src="./../images/user-default.png" class="user-profile-img">
+
                         <span class="writer">유저 닉네임 바인딩</span>
+
                         <span class="write-date">작성일자 바인딩</span>
-                        <a href="#"><i class="xi-eraser review-modify-btn"></i></a>
-                        <a href="#"><i class="xi-close-min review-delete-btn"></i></a>
+
+                        <i class="xi-eraser post-modify-btn"></i>
+                        <i class="xi-close-min post-delete-btn" onclick="deletePost()"></i>
+                        <!-- onClick post Num 매개변수 -->
                         <br>
-                        <textarea class="comment-content" readonly>dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</textarea><br>
+
+                        <textarea class="comment-content" readonly>리플 출력 테스트</textarea><br>
+
+                        <div class="post-modify-group">
+                            <form action="" method="POST">
+                                <textarea class="comment-modify" onkeydown="commentsLength()"></textarea><br>
+
+                                <button type="submit" class="post-modify-submit">수정</button>
+                            </form>
+                        </div>
 
                         <span class="post-filedown">
                             <i class="xi-folder-download post-filedown-btn"></i>첨부파일 : 
@@ -140,20 +187,33 @@
                     </div>
 
                     <div class="post-list-item">
-                        <img src="./../images/user-default.png">
+                        <img src="./../images/user-default.png" class="user-profile-img">
+
                         <span class="writer">유저 닉네임 바인딩</span>
+
                         <span class="write-date">작성일자 바인딩</span>
-                        <a href="#"><i class="xi-eraser review-modify-btn"></i></a>
-                        <a href="#"><i class="xi-close-min review-delete-btn"></i></a>
+
+                        <i class="xi-eraser post-modify-btn"></i>
+                        <i class="xi-close-min post-delete-btn" onclick="deletePost()"></i>
+                        <!-- onClick post Num 매개변수 -->
                         <br>
-                        <textarea class="comment-content" readonly>dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</textarea><br>
+
+                        <textarea class="comment-content" readonly>리플 출력 테스트</textarea><br>
+
+                        <div class="post-modify-group">
+                            <form action="" method="POST">
+                                <textarea class="comment-modify" onkeydown="commentsLength()"></textarea><br>
+
+                                <button type="submit" class="post-modify-submit">수정</button>
+                            </form>
+                        </div>
 
                         <span class="post-filedown">
                             <i class="xi-folder-download post-filedown-btn"></i>첨부파일 : 
                         </span>
                     </div>
 
-                    <div class="padding-div"></div>
+                <div class="padding-div"></div>
         </div>
     </section>
 
@@ -196,6 +256,7 @@
         <div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="./../main/main.js"></script>
     <script src="study-post.js"></script>
 </body>

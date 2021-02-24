@@ -72,10 +72,6 @@ body {
   text-decoration: underline;
 }
 
-.post-write textarea:focus {
-  outline: none;
-}
-
 .post-write textarea {
   margin-top: 15px;
   margin-bottom: 20px;
@@ -86,6 +82,15 @@ body {
   resize: none;
   padding: 13px;
   font-size: 13px;
+  overflow: auto;
+}
+
+.post-write textarea:focus {
+  outline: none;
+}
+
+.post-write textarea::-webkit-scrollbar {
+  display: none;
 }
 
 .post-write button {
@@ -115,7 +120,7 @@ body {
   padding-bottom: 50px;
 }
 
-.post-list img {
+.user-profile-img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -125,7 +130,6 @@ body {
 
 .post-list .post-list-item {
   width: 600px;
-  height: 280px;
   border-radius: 4px;
   border: 1px solid #eee;
   padding: 30px;
@@ -135,21 +139,70 @@ body {
 .post-list .leader-write {
   background-color: #f1f2f6;
   font-weight: 500;
+  border: none;
 }
 
-.post-list .post-list-item textarea {
+.post-list-item .comment-content {
   margin-top: 15px;
   margin-bottom: 10px;
   border: none;
   border-radius: 4px;
   width: 500px;
-  height: 130px;
+  height: 120px;
   resize: none;
   padding: 13px;
   font-size: 13px;
 }
 
-.post-list .post-list-item textarea:focus {
+.post-list-item .comment-content:focus {
+  outline: none;
+}
+
+.post-modify-group {
+  width: 500px;
+  text-align: center;
+  display: none;
+  transition: all 1s;
+}
+
+.comment-modify {
+  width: 500px;
+  height: 120px;
+  resize: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 13px;
+  font-size: 13px;
+  overflow: auto;
+}
+
+.comment-modify::-webkit-scrollbar {
+  display: none;
+}
+
+.comment-modify:focus {
+  outline: none;
+}
+
+.post-modify-submit {
+  width: 60px;
+  height: 25px;
+  background-color: ccc;
+  border-radius: 4px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.post-modify-submit:hover {
+  font-weight: 500;
+}
+
+.post-modify-submit:focus {
   outline: none;
 }
 
@@ -184,13 +237,14 @@ body {
   margin-left: 10px;
 }
 
-.review-modify-btn:before,
-.review-delete-btn:before {
+.post-modify-btn:before,
+.post-delete-btn:before {
   color: gray;
   font-weight: 500;
   position: relative;
   left: 240px;
   margin-right: 3px;
+  cursor: pointer;
 }
 
 .padding-div {
@@ -201,24 +255,23 @@ body {
 
 .study-menu {
   width: 230px;
-  height: 400px;
+  height: 800px;
   position: fixed;
   top: 170px;
-  right: 250px;
-  /* background-color: gray; */
-  z-index: 3;
+  right: 16%;
+  z-index: 2;
   transition: all 0.5s;
 }
 
-.study-member-toggle {
-  margin-top: 10px;
-  margin-left: 10px;
+.menu-toggle {
   width: 200px;
   height: 40px;
   padding: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
-.study-member-toggle button {
+.menu-btn {
   border: none;
   width: 200px;
   height: 30px;
@@ -226,16 +279,16 @@ body {
   cursor: pointer;
 }
 
-.study-member-toggle button:hover {
+.menu-btn:hover {
   font-weight: 500;
   cursor: pointer;
 }
 
-.study-member-toggle button:focus {
+.menu-btn:focus {
   outline: none;
 }
 
-.study-member {
+.menu-content {
   margin-top: 0;
   margin-left: 15px;
   padding: 5px;
@@ -250,13 +303,13 @@ body {
   -ms-overflow-style: none;
 }
 
-.study-member::-webkit-scrollbar {
+.menu-content::-webkit-scrollbar {
   display: none;
 }
 
 .study-member-list {
-  padding: 10px;
-  overflow: auto;
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
 .study-member-list img {
@@ -274,4 +327,173 @@ body {
 
 .study-member-list .leader {
   font-weight: 600;
+}
+
+.study-file-list {
+  padding: 10px;
+}
+
+.study-file-list span {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.study-file-list span:hover {
+  font-weight: 500;
+}
+
+.study-file-list i {
+  font-size: 15px;
+  font-weight: 500;
+  color: gray;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.study-manage {
+  font-size: 12px;
+  padding: 5px;
+}
+
+.study-manage p {
+  font-weight: 500;
+}
+
+.wating-member-list {
+  margin-bottom: 10px;
+}
+
+.member-approve-btn {
+  width: 35px;
+  height: 20px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 1px;
+}
+
+.member-approve-btn:hover {
+  font-weight: 500;
+}
+
+.member-approve-btn:focus {
+  outline: none;
+}
+
+.center-line {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border: 1px solid #eee;
+}
+
+.study-manage-menu button {
+  width: 150px;
+  height: 25px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 1px;
+}
+
+.study-manage-menu button:hover {
+  font-weight: 500;
+}
+
+.study-manage-menu button:focus {
+  outline: none;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 1920px) {
+  .user-interface {
+    left: 1430px;
+  }
+
+  .user-alram {
+    top: 72px;
+    left: 1400px;
+  }
+
+  .join-study-list {
+    top: 72px;
+    left: 930px;
+  }
+
+  .study-post {
+    top: 170px;
+    left: 28%;
+    position: absolute;
+  }
+
+  .study-menu {
+    width: 230px;
+    height: 400px;
+    position: fixed;
+    top: 190px;
+    right: 28%;
+    z-index: 2;
+    transition: all 0.5s;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* header */
+
+  .header {
+    height: 80px;
+  }
+
+  .header-logo-title h1 {
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 8px;
+  }
+
+  .header-menu {
+    padding: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .header-search input {
+    display: none;
+  }
+
+  .header-search i {
+    font-size: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  /* IMAGE SECTION */
+
+  .main-image-content {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    background-image: url(images/main_study.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+  }
+
+  .main-image-content h2 {
+    padding: 15px;
+    position: relative;
+    top: 80%;
+    font-size: 20px;
+  }
+
+  .main-image-content p {
+    padding: 15px;
+    position: relative;
+    top: 65%;
+    font-weight: 500;
+    font-size: 12px;
+  }
 }
