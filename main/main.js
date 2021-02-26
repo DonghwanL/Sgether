@@ -66,20 +66,34 @@ joinStudyList.addEventListener('mouseleave', function() {
 
  /* Main Slider */
 
-// var swiper = new Swiper('.swiper-container', {
-//     slidesPerView : 3,
-//     spaceBetween : 5,
-//     slidesPerGroup : 3,
-//     roundLengths: true,
-//     loopFillGroupWithBlank : true,
+ var slideNext = document.querySelector('.slide-next-btn');
+ var slidePrev = document.querySelector('.slide-prev-btn'); 
+ var swiperWrapper = document.querySelector('.swiper-wrapper'); 
 
-//     loop : true, 
 
-//     navigation : {
-//         nextEl : '.slide-next-btn', // 다음 버튼 클래스명
-//         prevEl : '.slide-prev-btn', // 이번 버튼 클래스명
-//     },
-// });
+ slideNext.addEventListener('click', function() {
+    swiperWrapper.style.marginLeft = '50px';
+ })
+
+ slidePrev.addEventListener('click', function() {
+    swiperWrapper.style.marginLeft = '8px';
+ })
+
+ slideNext.addEventListener('click', function() {
+    swiperWrapper.style.marginLeft = '50px';
+ })
+
+var swiper = new Swiper('.swiper-container', {
+     slidesPerView : 3,
+     spaceBetween : 60,
+     slidesPerGroup : 3,
+
+     navigation : {
+         nextEl : '.slide-next-btn', // 다음 버튼 클래스명
+         prevEl : '.slide-prev-btn', // 이번 버튼 클래스명
+     },
+     
+ });
  
 
  /* footer Event */

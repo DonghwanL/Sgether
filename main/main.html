@@ -6,13 +6,16 @@
     <title>SGETHER | 나에게 딱 맞는 스터디 찾기</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
 </head>
 <body>
 
     <!-- User Alram & Interface Group -->
     <div class="join-study-list">
-        Join Study List *
+        <span><a href="#">Join Study List</a></span>
+        <span><a href="#">Join Study List</a></span>
+        <span><a href="#">Join Study List</a></span>
     </div>
 
     <div class="user-alram">
@@ -33,8 +36,6 @@
             <ul>
                 <li><a href="#">회원정보 수정</a></li>
                 <li><a href="#">스크랩 목록</a></li>
-                <li><a href="#">메뉴2</a></li>
-                <li><a href="#">메뉴3</a></li>
             </ul>
         </div>
     </div>
@@ -73,55 +74,371 @@
             </div>
         </section>
 
-        <article class="study-list">
-            <div class="study-hit-slide">
-                <h3 class="study-list-title-group">
-                    <span class="study-list-title-sm">HIT STUDY</span>
+        <article>
+            <div class="study-list-info">
+                <h3>
+                    <span class="study-list-subtitle">HIT STUDY</span>
                     <span class="study-list-title">가장 인기있는 스터디</span>
-                    <button class="slide-prev-btn">❮
-                    </button>
-                    <button class="slide-next-btn">❯
-                    </button>
+
+                    <i class="xi-angle-left-min slide-prev-btn"></i>
+                    <i class="xi-angle-right-min slide-next-btn"></i>
                 </h3>
 
-                <div class="swiper-container">
-                    <div class="swiper-wrapper study-hit-list">
-                        <div class="swiper-slide study-hit-item">
-                            HIT 스터디 1
-                        </div>
-                        
-                        <div class="swiper-slide study-hit-item">
-                            HIT 스터디 2
-                        </div>
-                        
-                        <div class="swiper-slide study-hit-item">
-                            HIT 스터디 3
-                        </div>
-                    </div>
-                </div>
+                <div class="underline-bar"></div>
             </div>
 
-            <div class="study-list-content">
-                <h3 class="study-list-title-group">
-                    <span class="study-list-title-sm">DEV STUDY</span>
-                    <span class="study-list-title">개발 관련 스터디</span>
-                </h3>
-                
-                <div class="study-subject-list">
-                    <div class="study-list-item">
-                        스터디 1
-                    </div>
+            <div class="swiper-container">
+                 <div class="swiper-wrapper">
+                    <div class="swiper-slide study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
     
-                    <div class="study-list-item">
-                        스터디 2
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <div class="swiper-slide study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
     
-                    <div class="study-list-item">
-                        스터디 3
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="swiper-slide study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
+    
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
+    
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
+    
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
+    
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </article>
+
+        <article>
+            <div class="study-list-info">
+                <h3>
+                    <span class="study-list-subtitle">NOW</span>
+                    <span class="study-list-title">지금 모집 중인 스터디</span>
+                </h3>
+
+                <div class="underline-bar"></div>
+            </div>
+
+            <div class="study-list-content">
+                <div class="study-list-group">
+                    <div class="study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
+    
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
+    
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
+    
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="study-list-item">
+                        <div class="study-list-image">
+                            <img src="#">
+                        </div>
+
+                        <div class="study-list-text">
+                            <span class="field">자기계발</span>
+                            <i class="xi-star"></i>
+                            <span class="grade">5.0</span><br>
+
+                            <a href="#"><h3 class="study-title">스터디 제목</h3></a>
+
+                            <div class="sub-info">
+                                <span class="study-personnel">모집 가능 인원 : </span><br>
+                                <span class="study-time">시간 : </span><br>
+                            </div>
+                            <hr>
+
+                            <div class="user-info">
+                                <div class="user-profile">
+                                    <img src="./../images/user-default.png" class="study-leader-image">
+                                    <span class="study-leader-name">이름</span>
+                                </div>
+    
+                                <div class="study-region">
+                                    <a href="#"><i class="xi-heart"></i></a>
+                                    <button>지역1</button>
+                                    <button>지역2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </article>
+
+        <div class="padding-div"></div>
     </main>
 
     <!-- footer -->
