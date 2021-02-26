@@ -17,3 +17,4 @@ city.addEventListener('change', () => {
         borough.options[1] = option1;
     }
 });
+
