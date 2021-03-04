@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SGETHER | 스터디 찾기</title>
-    <link rel="stylesheet" href="./../main/main.css">
     <link rel="stylesheet" href="study-list.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
@@ -47,8 +46,8 @@
             <h3>스터디 생성</h3>
 
             <form action="#" method="POST" enctype="multipart/form-data">
-                <img src="./../images/study-create-img.png">
-                <input type="file"><br>
+                <img src="./../images/study-create-img.png" class="study-image-preview">
+                <input type="file" class="upload-study-image"><br>
 
                 <select>
                     <option selected>개발</option>
@@ -77,6 +76,7 @@
 
                 <textarea placeholder="스터디 소개를 입력 해주세요"></textarea><br><br>
 
+                <button><a href="#">검색</a></button>
                 <button type="submit">스터디 만들기</button>
 
             </form>
@@ -127,7 +127,9 @@
                     <option>1</option>
                 </select>
 
-                <button><a href="#">스터디 만들기</a></button>
+                <button class="search-btn"><a href="#">검색</a></button>
+                
+                <button><a href="#" class="study-create-btn">스터디 만들기</a></button>
             </div>
 
             <div class="study-list-container">
@@ -233,7 +235,6 @@
         <div>
     </div>
 
-    <script src="./../main/main.js"></script>
     <script src="study-list.js"></script>
 </body>
 </html>
